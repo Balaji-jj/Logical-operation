@@ -43,10 +43,58 @@ Logic gates are the basic building blocks of any digital system. It is an electr
 ![image](https://user-images.githubusercontent.com/71547910/235332254-db13d222-1246-4b57-bbb2-3ab2287ccaa8.png)
 
 ## PROGRAM:
+````
+int bs0 = 0;         // variable for reading the pushbutton status
+int bs1 = 0;
+int bs2 = 0;         // variable for reading the pushbutton status
+int bs3 = 0;
+int bs4 = 0;         // variable for reading the pushbutton status
+int bs5 = 0;
+void setup() {
+  pinMode(13, OUTPUT);
+  pinMode(0, INPUT);
+  pinMode(1, INPUT);
+  pinMode(2, INPUT);
+  pinMode(3, INPUT);
+  pinMode(4, INPUT);
+  pinMode(5, INPUT);
+}
+void loop() {
 
+  bs0 = digitalRead(0);
+  bs1 = digitalRead(1);
+  bs2 = digitalRead(2);
+  bs3 = digitalRead(3);
+  bs4 = digitalRead(4);
+  bs5 = digitalRead(5);
+
+  if (bs4 == 0 && bs5 == 0) 
+  {
+      digitalWrite(13, bs0);
+  } 
+  else if (bs4 == 0 && bs5 == 1) 
+  {
+    
+    digitalWrite(13, bs1);
+  }
+   else if (bs4 == 1 && bs5 == 0) 
+  {
+    
+    digitalWrite(13, bs2);
+  }
+   else   if (bs4 == 1 && bs5 == 1) 
+  {
+      digitalWrite(13, bs3);
+  } 
+}
+````
 ## CIRCUIT DIAGRAM:
 
+![image](https://github.com/Balaji-jj/Logical-operation/assets/142155013/e033a1ba-4d8b-40a9-b64b-cc6bed6a371d)
+
 ## OUTPUT:
+![image](https://github.com/Balaji-jj/Logical-operation/assets/142155013/ced8e1f0-23a1-4173-a254-fd3b51b1376f)
+
 
 ## RESULT:
 
